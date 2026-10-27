@@ -1,0 +1,170 @@
+import { BudgetConfig, Expense, SavingsGoal, Quest, Badge } from '../types';
+
+export const initialBudget: BudgetConfig = {
+  totalBudget: 1000,
+  period: 'monthly',
+  currency: '₹',
+  alertThreshold: 75,
+};
+
+export const initialExpenses: Expense[] = [
+  {
+    id: 'exp-1',
+    title: 'Semester Study Notes & Photocopy',
+    amount: 140,
+    category: 'education',
+    type: 'need',
+    date: '2026-10-24',
+    notes: 'Essential syllabus prep',
+  },
+  {
+    id: 'exp-2',
+    title: 'Pumpkin Spice Latte & Spooky Donut',
+    amount: 180,
+    category: 'food',
+    type: 'spooky-splurge',
+    date: '2026-10-25',
+    notes: 'Impulse cafe treat between lectures',
+  },
+  {
+    id: 'exp-3',
+    title: 'Campus Metro Pass Top-up',
+    amount: 150,
+    category: 'transport',
+    type: 'need',
+    date: '2026-10-25',
+    notes: 'Weekly travel pass',
+  },
+  {
+    id: 'exp-4',
+    title: 'Midnight Hostel Maggi & Snacks',
+    amount: 95,
+    category: 'food',
+    type: 'want',
+    date: '2026-10-26',
+    notes: 'Late night study hunger',
+  },
+  {
+    id: 'exp-5',
+    title: 'Ghastly Streaming Subscription',
+    amount: 120,
+    category: 'entertainment',
+    type: 'want',
+    date: '2026-10-26',
+    notes: 'Monthly recurring video plan',
+  },
+];
+
+export const initialGoals: SavingsGoal[] = [
+  {
+    id: 'goal-1',
+    title: 'Refurbished Study Laptop Fund',
+    targetAmount: 2500,
+    currentAmount: 1250,
+    category: 'tech',
+    deadline: '2026-12-15',
+    icon: 'Laptop',
+  },
+  {
+    id: 'goal-2',
+    title: 'Halloween Weekend Getaway',
+    targetAmount: 800,
+    currentAmount: 420,
+    category: 'travel',
+    deadline: '2026-11-05',
+    icon: 'Compass',
+  },
+  {
+    id: 'goal-3',
+    title: 'Emergency Potion Stash',
+    targetAmount: 1500,
+    currentAmount: 650,
+    category: 'emergency',
+    deadline: '2026-12-31',
+    icon: 'Shield',
+  },
+];
+
+export const initialQuests: Quest[] = [
+  {
+    id: 'quest-1',
+    title: 'Cauldron Batch Meal Challenge',
+    action: 'Cook a batch meal or pack your lunch 2 days in a row instead of cafeteria ordering.',
+    potentialSavings: '₹180',
+    pumpkinPoints: 75,
+    completed: false,
+    category: 'food',
+  },
+  {
+    id: 'quest-2',
+    title: 'Ghosting the Impulse Buy',
+    action: 'Enforce the 24-Hour Witching Hour Rule on any non-essential purchase over ₹100.',
+    potentialSavings: '₹250',
+    pumpkinPoints: 100,
+    completed: true,
+    category: 'impulse',
+  },
+  {
+    id: 'quest-3',
+    title: 'Banish Blood-Sucking Subs',
+    action: 'Review recurring active subscriptions and share or cancel 1 unused app.',
+    potentialSavings: '₹120',
+    pumpkinPoints: 60,
+    completed: false,
+    category: 'habits',
+  },
+  {
+    id: 'quest-4',
+    title: 'Tithe to the Golden Pumpkin',
+    action: 'Deposit at least ₹100 into your savings goal this week before weekend festivities.',
+    potentialSavings: '₹100',
+    pumpkinPoints: 80,
+    completed: false,
+    category: 'savings',
+  },
+];
+
+export const initialBadges: Badge[] = [
+  {
+    id: 'badge-1',
+    title: 'Cobweb Cleaner',
+    description: 'Logged your first expense in SpookySaver to sweep away financial fog.',
+    iconName: 'Sparkles',
+    unlocked: true,
+    unlockedDate: 'Oct 24, 2026',
+    criteria: 'Log 1 expense',
+  },
+  {
+    id: 'badge-2',
+    title: 'Jack-o-Lantern Guardian',
+    description: 'Stashed away your first ₹500 in the pumpkin treasure vault.',
+    iconName: 'Flame',
+    unlocked: true,
+    unlockedDate: 'Oct 25, 2026',
+    criteria: 'Save ₹500 in goals',
+  },
+  {
+    id: 'badge-3',
+    title: 'Vampire Slayer',
+    description: 'Identified and stopped recurring blood-sucking spending leaks.',
+    iconName: 'Moon',
+    unlocked: false,
+    criteria: 'Complete the subscription challenge',
+  },
+  {
+    id: 'badge-4',
+    title: 'Crypt Keeper',
+    description: 'Kept spending under 70% of total budget limit for 14 consecutive days.',
+    iconName: 'ShieldAlert',
+    unlocked: false,
+    criteria: 'Spend under 70% threshold',
+  },
+  {
+    id: 'badge-5',
+    title: 'Immortal Saver',
+    description: 'Achieved 100% of any active savings goal to harvest the Golden Pumpkin.',
+    iconName: 'Trophy',
+    unlocked: false,
+    criteria: 'Complete a savings goal',
+  },
+];

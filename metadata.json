@@ -1,0 +1,6 @@
+{
+  "name": "SpookySaver",
+  "description": "Halloween-themed AI smart savings assistant turning scary spending habits into fun financial quests with budget tracking, goals, and pumpkin rewards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
